@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BalaMov : MonoBehaviour
+public class BalaEnemyMov : MonoBehaviour
 {
     public float speed = 10f;
     // Start is called before the first frame update
@@ -21,11 +21,9 @@ public class BalaMov : MonoBehaviour
     void OnTriggerEnter(Collider collider)
     {
         // Comprueba si el objeto colisionado es un enemigo
-        if (collider.gameObject.CompareTag("Enemy"))
+        if (collider.gameObject.CompareTag("Player"))
         {
-            // Destruye el proyectil y el enemigo
-            Destroy(gameObject);
-            Destroy(collider.gameObject);
+            Debug.Log("Jugador Tocado");
         }
     }
 }

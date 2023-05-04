@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125723982102451304}
-  m_Layer: 0
+  - component: {fileID: 3350777855992043539}
+  m_Layer: 7
   m_Name: GrupoVerdes
-  m_TagString: Untagged
+  m_TagString: EnemyGroup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,6 +38,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3350777855992043539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831966847043680786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de92e378af77f404eb84ba72bb92c179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  distanciaUmbral: 8
 --- !u!1001 &902688060231471681
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44,6 +59,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 125723982102451304}
     m_Modifications:
+    - target: {fileID: 1180302504455691254, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7923349062023772668, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7923349062419385447, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7923349063090735526, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -92,6 +119,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Verde (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7923349063090735528, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
 --- !u!4 &7022129951099313127 stripped
@@ -106,6 +137,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 125723982102451304}
     m_Modifications:
+    - target: {fileID: 1180302504455691254, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7923349062023772668, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7923349062419385447, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7923349063090735526, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -154,6 +197,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Verde (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7923349063090735528, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
 --- !u!4 &5966944064057932383 stripped
@@ -168,6 +215,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 125723982102451304}
     m_Modifications:
+    - target: {fileID: 1180302504455691254, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7923349062023772668, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7923349062419385447, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7923349063090735526, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -216,6 +275,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Verde (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7923349063090735528, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
 --- !u!4 &4199119649205600126 stripped
@@ -230,6 +293,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 125723982102451304}
     m_Modifications:
+    - target: {fileID: 1180302504455691254, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7923349062023772668, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7923349062419385447, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7923349063090735526, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -278,6 +353,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Verde
       objectReference: {fileID: 0}
+    - target: {fileID: 7923349063090735528, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
 --- !u!4 &3961682538979793335 stripped
@@ -292,6 +371,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 125723982102451304}
     m_Modifications:
+    - target: {fileID: 1180302504455691254, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7923349062023772668, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7923349062419385447, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7923349063090735526, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -340,6 +431,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Verde (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7923349063090735528, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
 --- !u!4 &3939226596175737130 stripped
@@ -354,6 +449,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 125723982102451304}
     m_Modifications:
+    - target: {fileID: 1180302504455691254, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7923349062023772668, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7923349062419385447, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7923349063090735526, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -401,6 +508,10 @@ PrefabInstance:
     - target: {fileID: 7923349063090735528, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
       propertyPath: m_Name
       value: Verde (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7923349063090735528, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b96a18d9ff49834cbeeca2b797547de, type: 3}
