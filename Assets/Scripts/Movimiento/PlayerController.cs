@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
 
     private GameObject playerGun; // gameobject del objeto desde el que se va a disparar
 
+    private GameObject MainCamera;
+
     private Transform gunTransform;
 
     void Start()
@@ -21,6 +23,8 @@ public class PlayerController : MonoBehaviour
 
         // obtenemos el objeto PlayerGun e inicializamos la variable
         playerGun = GameObject.FindGameObjectWithTag("PlayerGun");
+
+        MainCamera = GameObject.FindGameObjectWithTag("MainCamera");
 
         // inicializamos gunTransform
         gunTransform = new GameObject("GunTransform").transform;
@@ -35,7 +39,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Fire1")) // El botón izquierdo del mouse
         {
             // Crea una instancia del proyectil en la posición del objeto "Gun"
-            Instantiate(projectilePrefab, gunTransform.position, gunTransform.rotation);
+            Instantiate(projectilePrefab, gunTransform.position, MainCamera.gameObject.transform.rotation);
         }
 
 
