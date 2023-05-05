@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 3782686841747389745}
   - component: {fileID: 5782858612051600185}
   - component: {fileID: 8706261405689038127}
+  - component: {fileID: 1339180131958264961}
   m_Layer: 7
   m_Name: Verde
   m_TagString: Enemy
@@ -294,7 +295,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 3551369406357590874, guid: 4a614a4b60fe35141bf158134ebe7483, type: 3}
   bulletSpeed: 10
-  fireRate: 1
+  minfireRate: 3
+  maxfireRate: 8
 --- !u!114 &8706261405689038127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,3 +310,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particulasMuerte: {fileID: 1524439852848599017, guid: e60cbdaa6f5f75b45a47386161be47e4, type: 3}
+--- !u!114 &1339180131958264961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7923349063090735528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9012aff7aad4eb14b8cf7a4c81d21ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -6,7 +6,9 @@ public class EnemigoDisparo : MonoBehaviour
 {
     public GameObject bulletPrefab; // Prefab de la bala que va a disparar
     public float bulletSpeed = 10f; // Velocidad de la bala
-    public float fireRate = 1f; // Velocidad de disparo (1 bala por segundo)
+    public float minfireRate = 5f;
+    public float maxfireRate = 10f;
+    private float fireRate = 0f;
 
     private float nextFireTime; // Tiempo en el que podrá disparar la siguiente bala
     private Transform gunTransform;
@@ -14,6 +16,7 @@ public class EnemigoDisparo : MonoBehaviour
     void Start()
     {
         gunTransform = transform.GetChild(0);
+        nextFireTime = Random.Range(minfireRate, maxfireRate);
     }
 
     void Update()
@@ -23,6 +26,8 @@ public class EnemigoDisparo : MonoBehaviour
         {
             // Instancia la bala y la dispara en la dirección del enemigo
             Instantiate(bulletPrefab, gunTransform.position, gunTransform.rotation);
+
+            fireRate = Time.time + Random.Range(minfireRate, maxfireRate);
 
             // Actualiza el tiempo en el que podrá disparar la siguiente bala
             nextFireTime = Time.time + fireRate;

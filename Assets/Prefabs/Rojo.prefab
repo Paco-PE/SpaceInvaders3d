@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4958981330664920175}
   - component: {fileID: 2459173213941765862}
   - component: {fileID: 3728884826310156627}
+  - component: {fileID: 7151789275983343729}
   m_Layer: 7
   m_Name: Rojo
   m_TagString: Enemy
@@ -97,7 +98,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 3551369406357590874, guid: 4a614a4b60fe35141bf158134ebe7483, type: 3}
   bulletSpeed: 10
-  fireRate: 1
+  minfireRate: 3
+  maxfireRate: 8
 --- !u!114 &3728884826310156627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,6 +113,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particulasMuerte: {fileID: 7283222333698062305, guid: 4cac1a1548771ad4287bb1c8932b17a5, type: 3}
+--- !u!114 &7151789275983343729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3008500620401005990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9012aff7aad4eb14b8cf7a4c81d21ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4468821080163633637
 GameObject:
   m_ObjectHideFlags: 0

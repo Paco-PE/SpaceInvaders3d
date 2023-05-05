@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  distanciaUmbral: 8
+  distanciaUmbral: 15
 --- !u!1001 &902688060231471681
 PrefabInstance:
   m_ObjectHideFlags: 0
