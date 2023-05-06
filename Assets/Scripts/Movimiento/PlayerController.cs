@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
 
     public GameObject projectilePrefab; // prefab de la bala que se va a disparar
 
+    private AudioManager audioManager;
+
     private Vector2 currentRotation; // rotación actual de la cámara
 
     private GameObject playerGun; // gameobject del objeto desde el que se va a disparar
@@ -20,6 +22,9 @@ public class PlayerController : MonoBehaviour
     {
         // bloquear el cursor para que no se muestre
         Cursor.lockState = CursorLockMode.Locked;
+
+        // obtener el componente audioManager
+        audioManager = FindObjectOfType<AudioManager>();
 
         // obtenemos el objeto PlayerGun e inicializamos la variable
         playerGun = GameObject.FindGameObjectWithTag("PlayerGun");
@@ -40,6 +45,9 @@ public class PlayerController : MonoBehaviour
         {
             // Crea una instancia del proyectil en la posición del objeto "Gun"
             Instantiate(projectilePrefab, gunTransform.position, MainCamera.gameObject.transform.rotation);
+
+            // Hacer sonar el sonido de disparo
+            audioManager.ReproducirSonido("shoot");
         }
 
 

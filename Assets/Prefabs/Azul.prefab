@@ -196,6 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particulasMuerte: {fileID: 5145832189248645371, guid: 28ca2dea9260f494bbcaa1e633c02a45, type: 3}
+  deathSound: {fileID: 8300000, guid: 83674621ac99b4f41a65ddf5fd2f7f25, type: 3}
 --- !u!114 &3702721477826961240
 MonoBehaviour:
   m_ObjectHideFlags: 0
