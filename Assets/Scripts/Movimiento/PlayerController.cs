@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
 
     private Transform gunTransform;
 
+    private int enemyLayerMask = 1 << 7;
+
     void Start()
     {
         // bloquear el cursor para que no se muestre
@@ -43,8 +45,20 @@ public class PlayerController : MonoBehaviour
         // disparos
         if (Input.GetButtonDown("Fire1")) // El botón izquierdo del mouse
         {
-            // Crea una instancia del proyectil en la posición del objeto "Gun"
-            Instantiate(projectilePrefab, gunTransform.position, MainCamera.gameObject.transform.rotation);
+            //Hacemos un RayCast desde el centro de la cámara
+            Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0f));
+            RaycastHit hitInfo;
+
+            // Si el raycast ha colisionado con algo se dispara en esa dirección, sino se dispara en la dirección de la cámara
+            if (Physics.Raycast(ray, out hitInfo, Mathf.Infinity, enemyLayerMask)) {
+                Vector3 bulletSpawnPosition = gunTransform.position;
+                Vector3 bulletSpawnDirection = (hitInfo.point - bulletSpawnPosition).normalized;
+                Quaternion bulletSpawnRotation = Quaternion.LookRotation(bulletSpawnDirection);
+                Instantiate(projectilePrefab, bulletSpawnPosition, bulletSpawnRotation);
+            }else{
+                // Crea una instancia del proyectil en la posición del objeto "Gun"
+                Instantiate(projectilePrefab, gunTransform.position, MainCamera.gameObject.transform.rotation);
+            }
 
             // Hacer sonar el sonido de disparo
             audioManager.ReproducirSonido("shoot");
