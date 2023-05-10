@@ -29,9 +29,10 @@ public class EnemyMuerte : MonoBehaviour
             Instantiate(particulasMuerte, posactual, particulasMuerte.transform.rotation);
             audioManager.ReproducirSonido("invaderkilled");
 
-            if (puntuacion >= 180)
+            GameObject[] enemigos = GameObject.FindGameObjectsWithTag("Enemy");
+            if (enemigos.Length == 0)
             {
-                SceneManager.LoadScene("Nivel2");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
     }
