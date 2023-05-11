@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemigoDisparo : MonoBehaviour
+public class BossDisparo : MonoBehaviour
 {
     public GameObject bulletPrefab; // Prefab de la bala que va a disparar
     public float bulletSpeed = 10f; // Velocidad de la bala

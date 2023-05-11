@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Carga3.unity
     guid: 3b6e4cb0f326c744a8836a6f7a1e3012
+  - enabled: 1
+    path: Assets/Scenes/Nivel3.unity
+    guid: 86343daceb32b92459597a1199abcbf1
   m_configObjects: {}
