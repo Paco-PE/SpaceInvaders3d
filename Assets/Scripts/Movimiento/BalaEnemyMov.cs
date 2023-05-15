@@ -5,6 +5,8 @@ using UnityEngine;
 public class BalaEnemyMov : MonoBehaviour
 {
     public float speed = 10f;
+    // Busca el objeto del jugador por su etiqueta y obtiene su componente Jugador
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,7 @@ public class BalaEnemyMov : MonoBehaviour
         if (collider.gameObject.CompareTag("Player"))
         {
             Debug.Log("Jugador Tocado");
+            collider.gameObject.GetComponent<VidaPlayer>().PierdeVida();
         }
     }
 }

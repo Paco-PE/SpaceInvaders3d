@@ -8,6 +8,7 @@ public class Sonido {
 }
 
 public class AudioManager : MonoBehaviour {
+    public float volumen = 0.5f;
     // Lista de Sonidos para cargar los clips de audio en el Inspector de Unity
     public List<Sonido> sonidos;
 
@@ -26,6 +27,7 @@ public class AudioManager : MonoBehaviour {
         if (clipsDeAudio.ContainsKey(nombreDelSonido)) {
             AudioSource audioSource = GetComponent<AudioSource>();
             audioSource.clip = clipsDeAudio[nombreDelSonido];
+            audioSource.volume = volumen;
             audioSource.Play();
         } else {
             Debug.LogWarning("El clip de audio '" + nombreDelSonido + "' no se encuentra en el diccionario de clips de audio.");
