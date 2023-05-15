@@ -8,7 +8,6 @@ public class MenuInicio : MonoBehaviour
 {
     public void Jugar(){
         AsyncOperation operacionCarga = SceneManager.LoadSceneAsync(1);
-        //StartCoroutine(Carga());
     }
 
     public void Salir(){
@@ -16,7 +15,9 @@ public class MenuInicio : MonoBehaviour
         Application.Quit();
     }
 
-    /*private IEnumerator Carga(){
-        AsyncOperation operacionCarga = SceneManager.LoadSceneAsync(1);
-    }*/
+    public void Supervivencia(){
+        Debug.Log("Supervivencia");
+        //AsyncOperation operacionCarga = SceneManager.LoadSceneAsync(1);
+    }
+
 }

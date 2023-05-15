@@ -26,7 +26,7 @@ public class Carga : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f); // Esperar 2 segundos antes de cargar la siguiente escena
 
-        AsyncOperation Operacion = SceneManager.LoadSceneAsync(2);
+        AsyncOperation Operacion = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
         yield return null;
     }
 }

@@ -3,21 +3,25 @@ using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EnemyMuerte : MonoBehaviour
+public class BossMuerte : MonoBehaviour
 {
     public GameObject particulasMuerte;
     private AudioManager audioManager;
     private int puntuacion;
+    private int disparosRecibidos = 0;
 
     void Start()
     {
         audioManager = FindObjectOfType<AudioManager>();
     }
 
-    void OnDestroy()
+    public void RecibirDisparo()
     {
-        if (this.gameObject.scene.isLoaded)
+        disparosRecibidos++;
+
+        if (disparosRecibidos == 5)
         {
+            // Código para destruir el jefe
             GameObject puntuacionTextObj = GameObject.Find("ScorePuntuacion");
             Text puntuacionText = puntuacionTextObj.GetComponent<Text>();
             puntuacion = int.Parse(puntuacionText.text) + 10;
@@ -34,6 +38,8 @@ public class EnemyMuerte : MonoBehaviour
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
+            Destroy(this.gameObject);
         }
     }
 }
+

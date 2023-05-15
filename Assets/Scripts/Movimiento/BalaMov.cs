@@ -27,5 +27,13 @@ public class BalaMov : MonoBehaviour
             Destroy(gameObject);
             Destroy(collider.gameObject);
         }
+        if (collider.gameObject.CompareTag("Boss"))
+        {
+            // Llama a la función RecibirDisparo del jefe
+            collider.gameObject.GetComponent<BossMuerte>().RecibirDisparo();
+
+            // Destruye el proyectil
+            Destroy(gameObject);
+        }
     }
 }
