@@ -3,19 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-using UnityEngine.UI;
-
 public class VidaPlayer : MonoBehaviour {
     public GameObject[] vidas; // un array con las imágenes de las vidas
     public int vidaMaxima = 3; // número máximo de vidas
 
     public GameObject particulasMuerte;
+    public float tiempoInmunidad = 2f; // Duración de la inmunidad en segundos
 
     private GameObject player;
-    
     private AudioManager audioManager;
 
     private int vidaActual; // número actual de vidas restantes
+    private bool esInmune = false; // indica si el jugador es inmune
 
     // Este método se llama al inicio del juego
     void Start() {
@@ -26,11 +25,15 @@ public class VidaPlayer : MonoBehaviour {
 
     // Este método se llama cada vez que el jugador pierde una vida
     public void PierdeVida() {
+        if (esInmune) {
+            return; // Si el jugador es inmune, no pierde vida
+        }
+
         vidaActual--; // Reducimos la vida actual en 1
 
         // Si la vida actual es menor o igual que cero, se acaba el juego
         if (vidaActual <= 0) {
-            AsyncOperation operacionCarga = SceneManager.LoadSceneAsync("SampleScene"); //Esto debería ser lo que pasa cuando nos quedamos sin vidas
+            AsyncOperation operacionCarga = SceneManager.LoadSceneAsync("GameOver"); // Esto debería ser lo que pasa cuando nos quedamos sin vidas
         }
         else {
             // Si no, desactivamos el objeto de imagen correspondiente a la vida perdida
@@ -42,13 +45,21 @@ public class VidaPlayer : MonoBehaviour {
             Instantiate(particulasMuerte, posactual, particulasMuerte.transform.rotation);
             audioManager.ReproducirSonido("explosion");
 
+            // Activamos la inmunidad
+            esInmune = true;
+            Invoke("DesactivarInmunidad", tiempoInmunidad);
+
             Invoke("ReactivarJugador", 1f);
         }
     }
 
-    public void ReactivarJugador()
-    {
+    public void ReactivarJugador() {
         // Activamos el objeto jugador
         player.SetActive(true);
     }
+
+    private void DesactivarInmunidad() {
+        esInmune = false; // Desactivamos la inmunidad
+    }
 }
+

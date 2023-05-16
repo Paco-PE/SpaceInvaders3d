@@ -20,4 +20,8 @@ public class MenuInicio : MonoBehaviour
         //AsyncOperation operacionCarga = SceneManager.LoadSceneAsync(1);
     }
 
+    public void Volver(){
+        AsyncOperation operacionCarga = SceneManager.LoadSceneAsync(0);
+    }
+
 }

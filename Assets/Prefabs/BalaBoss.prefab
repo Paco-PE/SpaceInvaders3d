@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 6611757846459407056}
   - component: {fileID: 2323801899865180786}
   m_Layer: 0
-  m_Name: BalaEnemigo
+  m_Name: BalaBoss
   m_TagString: Bala
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,7 +112,7 @@ Transform:
   m_GameObject: {fileID: 3551369406357590874}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1.345}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8025410728703051522}

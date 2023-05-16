@@ -9,6 +9,7 @@ TagManager:
   - EnemyGun
   - EnemyGroup
   - Boss
+  - Bala
   layers:
   - Default
   - TransparentFX
