@@ -8,7 +8,7 @@ public class VidaPlayer : MonoBehaviour {
     public int vidaMaxima = 3; // número máximo de vidas
 
     public GameObject particulasMuerte;
-    public float tiempoInmunidad = 2f; // Duración de la inmunidad en segundos
+    public float tiempoInmunidad = 3f; // Duración de la inmunidad en segundos
 
     private GameObject player;
     private AudioManager audioManager;
