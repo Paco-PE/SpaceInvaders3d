@@ -44,7 +44,6 @@ public class PlayerControllerNew : MonoBehaviour
     private int enemyLayerMask = 1 << 7;
     private CinemachineVirtualCamera virtualCamera;
     private GameObject MainCamera;
-
     Rigidbody rb;
 
     //Input values

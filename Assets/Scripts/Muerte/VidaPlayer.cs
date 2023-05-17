@@ -16,6 +16,10 @@ public class VidaPlayer : MonoBehaviour {
     private int vidaActual; // número actual de vidas restantes
     private bool esInmune = false; // indica si el jugador es inmune
 
+    // Modelos del personaje
+    public Transform modeloPrincipal;
+    public Transform modeloTransparente;
+
     // Este método se llama al inicio del juego
     void Start() {
         vidaActual = vidaMaxima; // Inicializamos las vidas
@@ -47,6 +51,8 @@ public class VidaPlayer : MonoBehaviour {
 
             // Activamos la inmunidad
             esInmune = true;
+            modeloPrincipal.gameObject.SetActive(false);
+            modeloTransparente.gameObject.SetActive(true);
             Invoke("DesactivarInmunidad", tiempoInmunidad);
 
             Invoke("ReactivarJugador", 1f);
@@ -60,6 +66,8 @@ public class VidaPlayer : MonoBehaviour {
 
     private void DesactivarInmunidad() {
         esInmune = false; // Desactivamos la inmunidad
+        modeloPrincipal.gameObject.SetActive(true);
+        modeloTransparente.gameObject.SetActive(false);
     }
 }
 
