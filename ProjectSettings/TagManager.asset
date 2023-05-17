@@ -10,6 +10,7 @@ TagManager:
   - EnemyGroup
   - Boss
   - Bala
+  - VirtualCamera
   layers:
   - Default
   - TransparentFX

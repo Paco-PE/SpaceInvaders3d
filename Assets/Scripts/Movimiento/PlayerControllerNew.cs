@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Cinemachine;
+
 
 public class PlayerControllerNew : MonoBehaviour
 {
@@ -7,7 +9,8 @@ public class PlayerControllerNew : MonoBehaviour
     [SerializeField]
     private float cadencia = 1f;
     [SerializeField, Range(0.001f, 0.999f)]
-    private float sensibilidad = 0.999f;
+    private float sensibilidad_ajuste = 0.999f;
+    public float sensibilidad;
     private float nextFire = 0f;
     [Header("=== Ajustes del Movimiento de la Nave ===")]
     [SerializeField]
@@ -39,6 +42,7 @@ public class PlayerControllerNew : MonoBehaviour
     private Transform gunTransform;
 
     private int enemyLayerMask = 1 << 7;
+    private CinemachineVirtualCamera virtualCamera;
     private GameObject MainCamera;
 
     Rigidbody rb;
@@ -49,6 +53,7 @@ public class PlayerControllerNew : MonoBehaviour
     private float arribaAbajo1D;
     private Vector2 cabeceo;
     private float disparo;
+    private float apuntar;
 
     void Start()
     {
@@ -63,6 +68,8 @@ public class PlayerControllerNew : MonoBehaviour
         // obtenemos el objeto PlayerGun e inicializamos la variable
         playerGun = GameObject.FindGameObjectWithTag("PlayerGun");
 
+        virtualCamera = GameObject.FindGameObjectWithTag("VirtualCamera").GetComponent<CinemachineVirtualCamera>();
+        
         MainCamera = GameObject.FindGameObjectWithTag("MainCamera");
 
         // inicializamos gunTransform
@@ -70,6 +77,8 @@ public class PlayerControllerNew : MonoBehaviour
         gunTransform.parent = playerGun.transform;
         gunTransform.localPosition = Vector3.zero;
         gunTransform.localRotation = Quaternion.identity;
+
+        sensibilidad = sensibilidad_ajuste;
     }
 
     void FixedUpdate() {
@@ -116,6 +125,23 @@ public class PlayerControllerNew : MonoBehaviour
     }
 
     void HandleShoot(){
+        // Apuntado
+        if (apuntar > 0.1f){
+            float targetFOV = 35f;
+            float lerpSpeed = 1.5f; // Velocidad de interpolación
+            
+            virtualCamera.m_Lens.FieldOfView = Mathf.Lerp(virtualCamera.m_Lens.FieldOfView, targetFOV, lerpSpeed * Time.deltaTime);
+            sensibilidad = sensibilidad_ajuste / 2;
+        }else{
+            float targetFOV = 60f;
+            float lerpSpeed = 1.5f; // Velocidad de interpolación
+            
+            virtualCamera.m_Lens.FieldOfView = Mathf.Lerp(virtualCamera.m_Lens.FieldOfView, targetFOV, lerpSpeed * Time.deltaTime);
+            sensibilidad = sensibilidad_ajuste;
+        }
+
+
+        // Disparos
         if(disparo > 0.1f && Time.time > nextFire){
             //Hacemos un RayCast desde el centro de la cámara
             Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0f));
@@ -157,6 +183,10 @@ public class PlayerControllerNew : MonoBehaviour
 
     public void OnDisparo(InputAction.CallbackContext context){
         disparo = context.ReadValue<float>();
+    }
+
+    public void OnApuntar(InputAction.CallbackContext context){
+        apuntar = context.ReadValue<float>();
     }
 
     #endregion
