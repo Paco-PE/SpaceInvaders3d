@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.889
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.05751428, g: 0.025952814, b: 0.06857792, a: 0.889}
+  m_IndirectSpecularColor: {r: 0.05752065, g: 0.025944663, b: 0.06857654, a: 0.889}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1299,9 +1299,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidas:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1094935595}
+  - {fileID: 130201837}
+  - {fileID: 893797453}
   vidaMaxima: 3
   particulasMuerte: {fileID: 7283222333698062305, guid: 46fa6c85f14cc0c4e8f1ee6045326682, type: 3}
   tiempoInmunidad: 3
