@@ -90,6 +90,12 @@ public class PlayerControllerNew : MonoBehaviour
         rb.AddRelativeTorque(Vector3.right * Mathf.Clamp(-cabeceo.y, -1f, 1f) * cabeceoVerticalTorque * Time.deltaTime);
         // CabeceoHorizontal
         rb.AddRelativeTorque(Vector3.up * Mathf.Clamp(cabeceo.x, -1f, 1f) * cabeceoHorizontalTorque * Time.deltaTime);
+        // Mantenemos la rotación sobre el eje z a 0 (para que se mantenga paralelo al suelo)
+        /* Descomentar si queremos que el jugador no rote sobre el eje z (cuando se da un giro de 360 grados hacia arriba queda muy raro)
+        Vector3 eulerRotation = rb.rotation.eulerAngles;
+        eulerRotation.z = 0f;
+        rb.rotation = Quaternion.Euler(eulerRotation);
+        */
 
         // Aceleracion delante/detras
         if(delanteDetras1D > 0.1f || delanteDetras1D < -0.1f) //para evitar el drift del mando
