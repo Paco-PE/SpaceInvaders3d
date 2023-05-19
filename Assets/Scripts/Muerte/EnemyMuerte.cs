@@ -20,7 +20,7 @@ public class EnemyMuerte : MonoBehaviour
     {
         if (this.gameObject.scene.isLoaded)
         {
-            scoreManager.AddScore(10);
+            if(scoreManager != null) scoreManager.AddScore(10);
             Vector3 posactual = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             Instantiate(particulasMuerte, posactual, particulasMuerte.transform.rotation);
             audioManager.ReproducirSonido("invaderkilled");
