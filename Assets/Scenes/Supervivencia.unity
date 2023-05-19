@@ -699,10 +699,10 @@ MonoBehaviour:
   - {fileID: 5582321743604779553, guid: 5336ba9ed7220394cbef7cb3b468b4e2, type: 3}
   - {fileID: 3364952850929931876, guid: 6b740f54413251c44a5b2dbe265b6c77, type: 3}
   - {fileID: 1831966847043680786, guid: b74a009888fc9c042911c51946a67468, type: 3}
-  initialSpawnInterval: 3
+  initialSpawnInterval: 5
   spawnIntervalDecreaseRate: 0.1
-  minSpawnInterval: 0.5
-  spawnRadius: 10
+  minSpawnInterval: 1
+  spawnRadius: 20
 --- !u!4 &910060984
 Transform:
   m_ObjectHideFlags: 0
@@ -1517,6 +1517,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1496428943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1496428945}
+  - component: {fileID: 1496428944}
+  m_Layer: 0
+  m_Name: ScoreManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1496428944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496428943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a03546069f12d04f8847b36b4171025, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentScore: 0
+  highScore: 0
+  scoreText: {fileID: 407937701}
+  highScoreText: {fileID: 1311087521}
+--- !u!4 &1496428945
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496428943}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 458.00192, y: 301, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1881954520
 GameObject:
