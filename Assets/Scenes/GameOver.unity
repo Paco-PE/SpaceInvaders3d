@@ -511,10 +511,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0, g: 0, b: 0, a: 0}
-    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0.40392157}
+    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0.39215687}
     m_PressedColor: {r: 0, g: 0, b: 0, a: 0.627451}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
-    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0, g: 0, b: 0, a: 0.39215687}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -724,10 +724,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0, g: 0, b: 0, a: 0}
-    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0.40392157}
+    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0.39215687}
     m_PressedColor: {r: 0, g: 0, b: 0, a: 0.627451}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
-    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0, g: 0, b: 0, a: 0.39215687}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -809,6 +809,7 @@ GameObject:
   - component: {fileID: 1365817471}
   - component: {fileID: 1365817470}
   - component: {fileID: 1365817474}
+  - component: {fileID: 1365817475}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -910,6 +911,108 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85e9f48e063d29f42af42b55d2a3099b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1365817475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365817469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 5b7b897c4a0fe434784d814ae598ef70, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a1c42177-b0ce-462d-95f8-1ade780ccee7
+    m_ActionName: ControlesNave/Acelerar[/Keyboard/s,/Keyboard/w,/DualShock4GamepadHID/leftStick/down,/DualShock4GamepadHID/leftStick/up]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 526cbd1d-9d09-483b-b509-96a5b1cf7106
+    m_ActionName: ControlesNave/Girar[/Keyboard/a,/Keyboard/d,/DualShock4GamepadHID/leftStick/left,/DualShock4GamepadHID/leftStick/right]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 95d5c357-652d-4f7c-9c56-5be6429d3f27
+    m_ActionName: ControlesNave/SubirBajar[/Keyboard/shift,/Keyboard/space,/DualShock4GamepadHID/leftShoulder,/DualShock4GamepadHID/rightShoulder]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7a60d25e-199c-4e7d-9c51-d875beb36d35
+    m_ActionName: ControlesNave/Cabeceo[/Mouse/delta,/DualShock4GamepadHID/rightStick]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9907cfea-a4d0-4db2-933d-4f268729e65a
+    m_ActionName: ControlesNave/Disparar[/Mouse/leftButton,/DualShock4GamepadHID/rightTrigger]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 54700d23-ffac-41fc-8e46-b849f9940fb3
+    m_ActionName: ControlesNave/Apuntar[/Mouse/rightButton,/DualShock4GamepadHID/leftTrigger]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1365817474}
+        m_TargetAssemblyTypeName: MenuOver, Assembly-CSharp
+        m_MethodName: OnNavigateUp
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8e9a960d-c557-4516-91a3-92dd271a286b
+    m_ActionName: ControllesMenu/Arriba[/DualShock4GamepadHID/dpad/up]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1365817474}
+        m_TargetAssemblyTypeName: MenuOver, Assembly-CSharp
+        m_MethodName: OnNavigateDown
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 81d6c19f-063a-42c4-8c4f-88ea59633fe0
+    m_ActionName: ControllesMenu/Abajo[/DualShock4GamepadHID/dpad/down]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1365817474}
+        m_TargetAssemblyTypeName: MenuOver, Assembly-CSharp
+        m_MethodName: OnSubmit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: f50d78ec-3283-404b-942f-cef07581501f
+    m_ActionName: ControllesMenu/Aceptar[/DualShock4GamepadHID/buttonSouth]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: ControllesMenu
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1462775581
 GameObject:
   m_ObjectHideFlags: 0

@@ -326,6 +326,118 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "ControllesMenu",
+            "id": "81e85a4e-fc3a-45b5-ab62-0e6c489389cb",
+            "actions": [
+                {
+                    "name": "Arriba",
+                    "type": "Button",
+                    "id": "8e9a960d-c557-4516-91a3-92dd271a286b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Abajo",
+                    "type": "Button",
+                    "id": "81d6c19f-063a-42c4-8c4f-88ea59633fe0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Aceptar",
+                    "type": "Button",
+                    "id": "f50d78ec-3283-404b-942f-cef07581501f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4f7a1eb0-0f5d-4bf5-bed9-57cc79a682f3",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Arriba",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e44b8c79-7210-4236-bb8c-b6f150d81bab",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Arriba",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9acf7ae4-e274-443a-b7ab-357e353540e5",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Abajo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "653a4dfb-f9d4-45a2-affa-f7be974b2329",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Abajo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9b0f151c-f1b5-48cb-b012-6b3c994ef3ef",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Aceptar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d5e06658-3c76-4d6e-9204-6fb53a699494",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Aceptar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8253af38-b7f8-4288-a2f8-10c6cd58493e",
+                    "path": "<Keyboard>/numpadEnter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Aceptar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
