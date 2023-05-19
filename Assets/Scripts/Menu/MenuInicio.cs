@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class MenuInicio : MonoBehaviour
 {
+    void Start(){
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
     public void Jugar(){
         AsyncOperation operacionCarga = SceneManager.LoadSceneAsync("Carga1");
     }

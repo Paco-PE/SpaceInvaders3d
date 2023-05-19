@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     {
         // bloquear el cursor para que no se muestre
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
         // obtener el componente audioManager
         audioManager = FindObjectOfType<AudioManager>();
