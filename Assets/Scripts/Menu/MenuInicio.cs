@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 
 public class MenuInicio : MonoBehaviour
 {
-    private PlayerController playerController;
+    //private PlayerController playerController;
     private int seleccionActual = 0;
     private int totalBotones = 3;
     private float tiempoUltimaPulsacion;
