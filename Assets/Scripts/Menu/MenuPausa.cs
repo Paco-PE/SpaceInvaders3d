@@ -11,9 +11,6 @@ public class MenuPausa : MonoBehaviour
     private bool isPaused;
     public GameObject menuPausa;
     void Start(){
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-
         menuPausa.SetActive(false);
         isPaused = false;
     }
