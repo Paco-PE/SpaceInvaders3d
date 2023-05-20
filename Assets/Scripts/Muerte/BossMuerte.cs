@@ -10,7 +10,7 @@ public class BossMuerte : MonoBehaviour
     private AudioManager audioManager;
     private int puntuacion;
     private int disparosRecibidos = 0;
-    public int vida = 5;
+    public int vida = 10;
 
     void Start()
     {
