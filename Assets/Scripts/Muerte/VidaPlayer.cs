@@ -26,48 +26,51 @@ public class VidaPlayer : MonoBehaviour {
         audioManager = FindObjectOfType<AudioManager>();
         player = GameObject.FindGameObjectWithTag("Player");
     }
-
-    // Este método se llama cada vez que el jugador pierde una vida
-    public void PierdeVida() {
-        if (esInmune) {
-            return; // Si el jugador es inmune, no pierde vida
-        }
-
-        vidaActual--; // Reducimos la vida actual en 1
-
-        // Si la vida actual es menor o igual que cero, se acaba el juego
-        if (vidaActual <= 0) {
-            AsyncOperation operacionCarga = SceneManager.LoadSceneAsync("GameOver"); // Esto debería ser lo que pasa cuando nos quedamos sin vidas
-        }
-        else {
-            // Si no, desactivamos el objeto de imagen correspondiente a la vida perdida
-            vidas[vidaActual].SetActive(false);
-
-            player.SetActive(false);
-
-            Vector3 posactual = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-            Instantiate(particulasMuerte, posactual, particulasMuerte.transform.rotation);
-            audioManager.ReproducirSonido("explosion");
-
-            // Activamos la inmunidad
-            esInmune = true;
-            modeloPrincipal.gameObject.SetActive(false);
-            modeloTransparente.gameObject.SetActive(true);
-            Invoke("DesactivarInmunidad", tiempoInmunidad);
-
-            Invoke("ReactivarJugador", 1f);
-        }
-    }
-
     public void ReactivarJugador() {
         // Activamos el objeto jugador
         player.SetActive(true);
     }
 
+    public void DesactivarJugador() {
+        // Activamos el objeto jugador
+        player.SetActive(false);
+    }
+
+    private void ActivarInmunidad() {
+        esInmune = true; // Desactivamos la inmunidad
+        modeloPrincipal.gameObject.SetActive(false);
+        modeloTransparente.gameObject.SetActive(true);
+    }
     private void DesactivarInmunidad() {
         esInmune = false; // Desactivamos la inmunidad
         modeloPrincipal.gameObject.SetActive(true);
         modeloTransparente.gameObject.SetActive(false);
     }
-}
 
+    // Este método se llama cada vez que el jugador pierde una vida
+    public void PierdeVida() {
+        if (!esInmune) {
+            vidaActual--; // Reducimos la vida actual en 1
+
+            // Si la vida actual es menor o igual que cero, se acaba el juego
+            if (vidaActual <= 0) {
+                AsyncOperation operacionCarga = SceneManager.LoadSceneAsync("GameOver"); // Esto debería ser lo que pasa cuando nos quedamos sin vidas
+            }
+            else {
+                // Si no, desactivamos el objeto de imagen correspondiente a la vida perdida
+                vidas[vidaActual].SetActive(false);
+
+                DesactivarJugador();
+
+                Vector3 posactual = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+                Instantiate(particulasMuerte, posactual, particulasMuerte.transform.rotation);
+                audioManager.ReproducirSonido("explosion");
+
+                ActivarInmunidad();
+                Invoke("DesactivarInmunidad", tiempoInmunidad);
+
+                ReactivarJugador();
+            }
+        }
+    }
+}
