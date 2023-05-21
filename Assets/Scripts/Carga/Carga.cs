@@ -11,6 +11,9 @@ public class Carga : MonoBehaviour
 
     void Start()
     {
+        // bloquear el cursor para que no se muestre
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         StartCoroutine(CargarAsync());
     }
 

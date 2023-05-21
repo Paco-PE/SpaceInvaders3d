@@ -1646,7 +1646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cadencia: 2
-  sensibilidad_ajuste: 0.999
+  sensibilidad_ajuste: 0.5
   sensibilidad: 0.5
   aceleracion: 1000
   aceleracionVertical: 1000
