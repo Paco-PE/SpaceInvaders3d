@@ -2011,6 +2011,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 198579425050035546, guid: 26c4eb9c27669e94a9fde995167ab2c4, type: 3}
+      propertyPath: m_TagString
+      value: Boss
+      objectReference: {fileID: 0}
     - target: {fileID: 857080469487503014, guid: 26c4eb9c27669e94a9fde995167ab2c4, type: 3}
       propertyPath: vida
       value: 10
